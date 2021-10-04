@@ -1,5 +1,9 @@
+import os
+
+file = os.path.dirname(__file__)
+
 def Cadastrar(i1, i2, c3):
-	arquivo = open("Contas.txt", "a")
+	arquivo = open(f"{os.path.join(file, './Contas.txt')}", "a")
 	nome = i1.input.get().strip()
 	senha = i2.input.get().strip()
 	if senha == "" and nome == "":
